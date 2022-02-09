@@ -1,6 +1,8 @@
 {
   "name": "contacts-app",
-  "version": "0.0.0",
+  "description": "Example project from a contact app using Angular, Store and Material.",
+  "version": "0.0.1",
+  "license": "SLK IT Solutions SRL",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
