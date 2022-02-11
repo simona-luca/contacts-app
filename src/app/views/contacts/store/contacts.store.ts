@@ -3,14 +3,11 @@ import * as fromContacts from '@app/contacts-store';
 import { select, Store } from '@ngrx/store';
 import { Contact } from '@app/core/models';
 import { create, load, remove, update } from '@app/contacts-store/contacts-actions';
-import { BehaviorSubject } from 'rxjs';
 
 @Injectable()
 export class ContactsStore {
 
-  contacts$ = new BehaviorSubject([]);
-
-  // contacts$ = this.store.pipe(select(fromContacts.getAllContacts));
+ contacts$ = this.store.pipe(select(fromContacts.getAllContacts));
 
   constructor(private store: Store<fromContacts.ContactsState>) {
   }
