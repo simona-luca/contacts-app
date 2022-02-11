@@ -1,6 +1,6 @@
 import { Contact } from '@app/core/models';
-import {EntityState, createEntityAdapter} from '@ngrx/entity';
-import {createReducer, on} from '@ngrx/store';
+import { EntityState, createEntityAdapter } from '@ngrx/entity';
+import { createReducer, on } from '@ngrx/store';
 import {
   createSuccess,
   loadSuccess, removeSuccess,
@@ -31,16 +31,16 @@ export const INIT_STATE: State = contactsAdapter.getInitialState({
 
 export const reducer = createReducer<State>(
   INIT_STATE,
-  on(loadSuccess, (state, {contact}) =>
+  on(loadSuccess, (state, { contact }) =>
     contactsAdapter.upsertOne(contact, state)
   ),
-  on(createSuccess, (state, {contact}) =>
+  on(createSuccess, (state, { contact }) =>
     contactsAdapter.addOne(contact, state)
   ),
   // on(updateSuccess, (state, {contact}) =>
   //   contactsAdapter.updateOne( contact, state)
   // ),
-  on(removeSuccess, (state, {id}) =>
+  on(removeSuccess, (state, { id }) =>
     contactsAdapter.removeOne(id, state)
   )
 );
