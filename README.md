@@ -25,3 +25,30 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+Code Challenge - Contacts App
+
+Technologies to be used:
+- Angular (v9+) & Material
+- NGRx store & Rxjs
+
+The app will have one page, the Contacts Page.
+
+Contact entity contains: firstName, lastName, email, phone, favourite.
+
+Contacts Page needs to contain:
+- header with search field + Add Contact button
+- table with contacts:
+    - columns for each field + Actions for Edit/Delete
+    - favourite column with star icon and option to toggle the favourite field
+    - Add/Edit Contact dialog
+    - confirm Delete Contact dialog
+
+All CRUD actions need to be linked to store;
+
+The following should be used:
+- lazy loaded modules
+- reactive forms ( + validators for email/phone )
+- use of interfaces/services
+- use of store
